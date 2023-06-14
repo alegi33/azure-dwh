@@ -23,9 +23,9 @@ The raw dataset consists of trip, rider, payment and station data in separate cs
 
 ## Data Transformation
 1) Use 00_raw_ProjectDataToPostgres.py to create raw transactional data into Azure PostgreSQL database. This will simulate the production environment where the data is being used in the OLTP system. 
-2) Extract the data from Azure PostgreSQL by using a one-time pipeline that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as text files in Blob Storage, ready for loading into the data warehouse.
+2) Extract the data from Azure PostgreSQL by using a one-time pipeline in Azure Synapse that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as CSV files in Blob Storage, ready for loading into the data warehouse.
 3) Create external tables in Azure Synapse workspace to read the tables in Blob storage.
-4) Transform the tables into fact and dimension tables.
+4) Transform the tables into fact and dimension tables using SQL.
 
 ## List of Resources
 - udacity.com
